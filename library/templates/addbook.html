@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>welcome to library</h1>
+        <form method="POST" action="addbook">
+                {% csrf_token %}
+            <input type="text" name="bookname" placeholder="enter book name">
+            <input type="text" name="genres" placeholder="enter genre of the book">
+            <input type="text" name="authid" placeholder="enter author id">
+            <input type="submit">
+        </form>
+
+        {% block content %}
+
+        <p>book data:  {{book_data}} </p>
+
+        {% endblock %}
+
+</body>
+</html>

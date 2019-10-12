@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from . import views
 from django.views.decorators.csrf import csrf_exempt
 from graphene_django.views import GraphQLView
 
@@ -23,5 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('b/',include('books.urls')),
     path('a/',include('author.urls')),
+    path('add_all/add',views.add,name="add"),
     path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path('add_all/',views.add_all,name="add_all"),
 ]
