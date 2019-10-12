@@ -1,9 +1,9 @@
 # Library-management-with-django
 
-This repo contains addition of data to database and also getting back the data of books
-This is made with django as a framework...
 
-To run this small project you need to have django and graphene and an environment setup
+This repo contains addition of books and author data to database and also getting back the data of books and author...
+I have used graphene to retrieve the data and to store the data to database.
+
 
 then type the following commands---
 
